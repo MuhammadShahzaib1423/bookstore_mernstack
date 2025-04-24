@@ -9,10 +9,12 @@ require("./config/connectedDb")
 const user = require('./routes/user');
 const book = require('./routes/book');
 const favourite = require('./routes/favourite');
+const cart = require('./routes/cart');
 app.use(express.json());
 app.use("/bookstore",user);
 app.use("/bookstore" ,book);
-app.use("/bookstore/book",favourite)
+app.use("/bookstore/book",favourite);
+app.use("/bookstore/cart",cart);
 
 app.get('/',(req,res)=>{
     res.send('Hello World!');

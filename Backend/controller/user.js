@@ -62,28 +62,22 @@ const UserSignin = async (req, res) => {
                 { role: UnknownUser.role }
             ];
             const token = jwt.sign({ authClaims }, process.env.JWT_SECRET_KEY, { expiresIn: "1d" });
-        
+       
             return res.status(200).json({
                 message: "Signin Successfull",
                 id: UnknownUser._id,
                 role: UnknownUser.role,
-                token: token
+                token: token 
             });
         }
         else {
             return res.status(400).json({ message: "Invalid credentials" });
         }
-        
-
-
     }catch (err){
         console.log("Error in signin",err);
         res.status(500).json({message:"Internal server error"});
-
     }
-
 }
-
 const getUser = async (req, res) => {   
 
     try{
@@ -112,9 +106,5 @@ return res.status(200).json({ message: "Address updated successfully" });
 
 }
 }
-
-
-
-
         
 module.exports = {UserSignup,UserSignin,getUser,updateaddress};
