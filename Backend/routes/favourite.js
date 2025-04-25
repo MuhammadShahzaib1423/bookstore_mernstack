@@ -6,6 +6,6 @@ const {authenticatetoken} = require('../routes/userAuth');
 
 router.put('/add-to-favourites',authenticatetoken,addToFavourites);
 
-router.delete('/remove-from-favourites',authenticatetoken,removeFromFavourites);
+router.put('/remove-from-favourites',authenticatetoken,removeFromFavourites);
 router.get('/get-favourites',authenticatetoken,getFavourites);
 module.exports = router;
