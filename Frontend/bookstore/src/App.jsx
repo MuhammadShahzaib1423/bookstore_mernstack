@@ -8,6 +8,8 @@ import Login from './pages/Login'
 import Signup from './pages/Signup'
 import AllBooks from './pages/AllBooks'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import ViewBookDetail from './components/ViewBookDetails/ViewBookDetail'
+import Aboutus from './pages/Aboutus'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -20,16 +22,13 @@ function App() {
     <Route path='/' element={<Home/>} />
     <Route path='/login' element={<Login/>} />
     <Route path='/signup' element={<Signup/>} />
+    <Route path='/about-us' element={Aboutus} />
     <Route path='/all-books' element={<AllBooks/>} />
+    <Route path='/view-book-details/:bookid' element={<ViewBookDetail/>} />
 
 </Routes>
-
-    <Footer/>
-      
+    <Footer/> 
     </Router>
-      
-    
- 
     </>
   )
 }
