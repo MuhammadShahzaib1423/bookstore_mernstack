@@ -2,7 +2,7 @@ import React from 'react'
 import Heroimg from '../../assets/hero.jpg'
 const Hero = () => {
   return (
-    <div className='h-[75vh] flex md:flex-row flex-col gap-4 px-10 items-center justify-center '>
+    <div className='h-screen md:h-[75vh] flex md:flex-row flex-col gap-4 px-10 items-center justify-center '>
         <div className='lg:w-3/6  flex flex-col  items-start lg:items-start justify-center mt-10 '>
         <h1 className='text-4xl lg:text-6xl font-semibold text-yellow-100'>Escape Into Worlds Beyond the Page</h1>
         <p className='text-lg text-gray-200 mt-4'>

@@ -4,7 +4,7 @@ const app = express();
 
 require('dotenv').config();
 require("./config/connectedDb")
-
+const cors = require('cors');
 
 const user = require('./routes/user');
 const book = require('./routes/book');
@@ -12,6 +12,7 @@ const favourite = require('./routes/favourite');
 const cart = require('./routes/cart');
 
 const order = require('./routes/order');
+app.use(cors());
 app.use(express.json());
 app.use("/bookstore",user);
 app.use("/bookstore" ,book);
